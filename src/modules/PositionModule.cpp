@@ -275,7 +275,7 @@ void PositionModule::sendOurPosition(NodeNum dest, bool wantReplies, uint8_t cha
     }
 }
 
-#define RUNONCE_INTERVAL 5000;
+#define RUNONCE_INTERVAL 1000;
 
 int32_t PositionModule::runOnce()
 {

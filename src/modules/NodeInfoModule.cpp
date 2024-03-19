@@ -44,7 +44,7 @@ void NodeInfoModule::sendOurNodeInfo(NodeNum dest, bool wantReplies, uint8_t cha
         p->decoded.want_response = (config.device.role != meshtastic_Config_DeviceConfig_Role_TRACKER &&
                                     config.device.role != meshtastic_Config_DeviceConfig_Role_SENSOR) &&
                                    wantReplies;
-        p->priority = meshtastic_MeshPacket_Priority_BACKGROUND;
+        p->priority = meshtastic_MeshPacket_Priority_RELIABLE;
         if (channel > 0) {
             LOG_DEBUG("sending ourNodeInfo to channel %d\n", channel);
             p->channel = channel;

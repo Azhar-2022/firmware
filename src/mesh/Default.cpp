@@ -6,7 +6,7 @@ uint32_t Default::getConfiguredOrDefaultMs(uint32_t configuredInterval)
         return configuredInterval * 1000;
     return default_broadcast_interval_secs * 1000;
 }
-
+ 
 uint32_t Default::getConfiguredOrDefaultMs(uint32_t configuredInterval, uint32_t defaultInterval)
 {
     if (configuredInterval > 0)
@@ -16,7 +16,7 @@ uint32_t Default::getConfiguredOrDefaultMs(uint32_t configuredInterval, uint32_t
 
 uint32_t Default::getConfiguredOrDefault(uint32_t configured, uint32_t defaultValue)
 {
-    if (configured > 0)
+    if (configured > 0) 
         return configured;
 
     return defaultValue;
